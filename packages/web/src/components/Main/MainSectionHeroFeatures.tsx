@@ -4,12 +4,17 @@ import { useTranslation } from 'react-i18next'
 import { Col, Row } from 'reactstrap'
 import styled from 'styled-components'
 
+import FastaFileList from 'src/components/Main//FastaFileList'
+
 export const FeatureBoxContainer = styled.div`
   margin: 10px 5px;
 
-  @media (max-width: 767.98px) {
-    display: none;
-  }
+  max-height: 400px;
+  overflow-y: auto;
+
+  // @media (max-width: 767.98px) {
+  //   display: none;
+  // }
 `
 
 export const FeatureBox = styled.div`
@@ -45,49 +50,14 @@ export function MainSectionHeroFeatures() {
   return (
     <FeatureBoxContainer>
       <Row noGutters className="mx-auto text-center">
-        <Col md={6} className="mb-2">
+        <Col className="mb-2">
           <FeatureBoxTop>
-            <h3>{t('Simple')}</h3>
-            <p>{t('No installation or setup - drop a file and see the results')}</p>
+            <h3>{t('Demo Fasta Files')}</h3>
+            <p>{t('Click on the following demo fasta files for quick analysis examples.')}</p>
+            <FastaFileList></FastaFileList>
           </FeatureBoxTop>
         </Col>
 
-        <Col md={6} className="mb-2">
-          <FeatureBoxTop>
-            <h3>{t('Private')}</h3>
-            <p>{t('No remote processing - sequence data never leaves your computer')}</p>
-          </FeatureBoxTop>
-        </Col>
-      </Row>
-
-      <Row noGutters className="text-center">
-        <Col md={3} className="mb-2">
-          <FeatureBoxBottom>
-            <h3>{t('Mutation Calling')}</h3>
-            <p>{t('Find differences of your sequences relative to the reference in standard numbering')}</p>
-          </FeatureBoxBottom>
-        </Col>
-
-        <Col md={3} className="mb-2">
-          <FeatureBoxBottom>
-            <h3>{t('Clade Assignment')}</h3>
-            <p>{t('Find out which Nextstrain clades your samples are from')}</p>
-          </FeatureBoxBottom>
-        </Col>
-
-        <Col md={3} className="mb-2">
-          <FeatureBoxBottom>
-            <h3>{t('Phylogenetic Placement')}</h3>
-            <p>{t('See where on the SARS-CoV-2 tree your sequences fall')}</p>
-          </FeatureBoxBottom>
-        </Col>
-
-        <Col md={3} className="mb-2">
-          <FeatureBoxBottom>
-            <h3>{t('Quality Control')}</h3>
-            <p>{t('Check your data against multiple QC metrics')}</p>
-          </FeatureBoxBottom>
-        </Col>
       </Row>
     </FeatureBoxContainer>
   )

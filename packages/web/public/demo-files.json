@@ -1,0 +1,10 @@
+[
+    {
+        "name": "nextclade.aligned.fasta",
+        "link": "https://reads-nextclade.s3.us-east-2.amazonaws.com/nextclade.aligned.fasta"
+    },
+    {
+        "name": "Sars_Cov2_11_samples_Nextclade.fasta",
+        "link": "https://reads-nextclade.s3.us-east-2.amazonaws.com/Sars_Cov2_11_samples_Nextclade.fasta"
+    }
+]
